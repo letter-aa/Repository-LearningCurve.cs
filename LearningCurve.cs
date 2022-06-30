@@ -10,7 +10,7 @@ public class LearningCurve : MonoBehaviour
 
     public float Pi = 3.14f; //Don't forget to add "f" at the beginning of every float number.
     public string FirstName = "Shohjahon"; //Always add double quotation marks for strings, obviously.
-    public bool IsAuthor = true; //Booleans are ALWAYS ONLY true or false.
+    public bool IsAuthor = true; //Booleans are ALWAYS true or false.
 
     // Start is called before the first frame update.
     void Start()
@@ -20,12 +20,22 @@ public class LearningCurve : MonoBehaviour
         Debug.Log($"This is an example of an interpolated string. For example, I can directly call out this variable using only this format; {FirstName}");
 
         Operators();
+
+        Debug.Log("Choose a character...");//you know
+        bool beanos = true;//variable
+        if (beanos == true)//checking if character has been chosen or not
+        {
+            int CharacterAge = 200;//character's age
+            GenerateCharacter("Scrooge", CharacterAge);
+                       //character's name //character's age/level
+        }
+        
     }
 
     // Update is called once per frame, but we are using this later.
     void Update()
     {
-        
+
     }
 
     void AgeAdder()
@@ -39,8 +49,8 @@ public class LearningCurve : MonoBehaviour
     {
         int Health = 100; //This is the wrong name, because it is not detailed enough to understand.
         int MaxPlayerHealth = 100; //Now this is correct because, it IS detailed enough to understand.
-        //(btw if every word's beginning is upper case in a variable name, its called Pascal format)
-        
+                                   //(btw if every word's beginning is upper case in a variable name, its called Pascal format)
+
         /*This is an implicit conversion. "Implicit conversions take place automatically,
         usually when a smaller value will fit into another variable type without any rounding."*/
         int RandomInt = 7;
@@ -66,9 +76,17 @@ public class LearningCurve : MonoBehaviour
         Public (which is avalible to any script without rescriction),
         Private (This s only avalible in the class they're created in (which is called the containing class). FACT: Any variable without an access modifier defaults to private.),
         Protected (Accessible from their containing class or types derived from it.),
-        Internal (Only available in the current assembly.)
+        Internal (Only available in the current assembly.)*/
+
+        /*Method blueprint:
+        accessModifier returnType UniqueName(parameterType parameterName)
+        {
+            method body
+        }*/
+
+        //calling methods: UniqueName(); or UniqueName(parameterVariable);
     }
-    
+
     void Operators()
     {
         /*"Operators basically represent arithmetic (represents basic math functions, ex. +, -, *, / ) ,
@@ -88,18 +106,20 @@ public class LearningCurve : MonoBehaviour
         int yeetus_deletus1 = 32;
         yeetus_deletus1 *= 2;
 
-        //OR you could do it this way;
-        int yeetus_deletus2 = 32;
-        int yeetus_deletus3 = 2;
-        Debug.Log(yeetus_deletus2 * yeetus_deletus3);
-
-        //etc.
-
         //You can even add STRINGS! (but you can't subtract them, divide them, multiply them, etc.) Here's how;
-        string FullName = "Shohjahon" + "Jalilov";
+        string FullName = "Shohjahon" + " Jalilov";
         Debug.Log(FullName);
 
-        //Cool, right! I know!
+        //Cool, right? I know!
     }
 
+                          //parameter1 //parameter2
+    void GenerateCharacter(string name, int level)
+    {
+                                                 //variable called 
+                                                   //for  variable called
+                                                   //name   for
+                                    //name     //age      //age/level
+        Debug.LogFormat("Character: {0}, Age: {1}", name, level);
+    }
 }
