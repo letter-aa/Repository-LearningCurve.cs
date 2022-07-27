@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
-    //the variables that show up in the inspector
+    //The variables that show up in the inspector.
     private int CurrentAge = 10;
     public int AddedAge = 1;
-
+    //----------------------------------------------------------------------------------------------
     public float Pi = 3.14f; //Don't forget to add "f" at the beginning of every float number.
     public string FirstName = "Shohjahon"; //Always add double quotation marks for strings, obviously.
     public bool IsAuthor = true; //Booleans are ALWAYS true or false.
@@ -18,9 +18,9 @@ public class LearningCurve : MonoBehaviour
         AgeAdder();
         //just add a dollar sign, $, to any Debug.Log(), or print(), or Console.WriteLine() then boom baby it's an interpolated string
         Debug.Log($"This is an example of an interpolated string. For example, I can directly call out this variable using only this format; {FirstName}");
-
+        //---------------------------------------------------------------------------------
         Operators();
-
+        //---------------------------------------------------------------------------------
         Debug.Log("Choose a character...");//you know
         bool beanos = true;//variable
         if (beanos == true)//checking if character has been chosen or not
@@ -29,7 +29,7 @@ public class LearningCurve : MonoBehaviour
             GenerateCharacter("Scrooge", CharacterAge);
                        //character's name //character's age/level
         }
-        
+        //---------------------------------------------------------------------------------
     }
 
     // Update is called once per frame, but we are using this later.
@@ -50,7 +50,7 @@ public class LearningCurve : MonoBehaviour
         int Health = 100; //This is the wrong name, because it is not detailed enough to understand.
         int MaxPlayerHealth = 100; //Now this is correct because, it IS detailed enough to understand.
                                    //(btw if every word's beginning is upper case in a variable name, its called Pascal format)
-
+        //---------------------------------------------------------------------------------------------------------------------
         /*This is an implicit conversion. "Implicit conversions take place automatically,
         usually when a smaller value will fit into another variable type without any rounding."*/
         int RandomInt = 7;
@@ -64,20 +64,20 @@ public class LearningCurve : MonoBehaviour
           is a risk of losing a variable's information during the conversion."*/
         int ThisIsAnExplicitConversion = (int)3.14;
         Debug.Log(ThisIsAnExplicitConversion);
-
+        //---------------------------------------------------------------------------------------------
         //The operators example(s)/information has been trasported to the method called "Operators".
-
+        //---------------------------------------------------------------------------------------------
         /*There are three types of variable scope;
         Global (which can be accessed throught the whole game), 
         Class or member (which is only accessible through the class), 
         and Local (which is only accessed through the block of code that it's in).*/
-
+        //---------------------------------------------------------------------------------------------
         /*There are three types of access modifiers;
         Public (which is avalible to any script without rescriction),
         Private (This s only avalible in the class they're created in (which is called the containing class). FACT: Any variable without an access modifier defaults to private.),
         Protected (Accessible from their containing class or types derived from it.),
         Internal (Only available in the current assembly.)*/
-
+        //---------------------------------------------------------------------------------------------
         /*Method blueprint:
         accessModifier returnType UniqueName(parameterType parameterName)
         {
@@ -85,6 +85,12 @@ public class LearningCurve : MonoBehaviour
         }*/
 
         //calling methods: UniqueName(); or UniqueName(parameterVariable);
+        //---------------------------------------------------------------------------------------------
+        //RETURN VALUES
+        //Methods can return value of any C# type. Void doesn't return anyting.
+        //Looking at our blueprints, method return types show after the ACCESS MODIFIER (pub,priv, etc.).
+        //ALL METHODS NEED TO CONTAIN THE RETURN KEYWORD, FOLLOWED BY THE RETURN VALUE.
+        //---------------------------------------------------------------------------------------------
     }
 
     void Operators()
